@@ -2,11 +2,14 @@ import React from "react";
 
 import "./Task.css";
 
-const Task = ({ deleteTaskHandler, children, id  }) => {
-  // const [deleteText, setDeleteText] = useState('');
+const Task = ({ deleteTaskHandler, task }) => {
   return (
-    <li className="task-item" onClick={() => deleteTaskHandler(id)}>
-      { children }
+    <li className="task-item"
+        key={task.id}
+        id={task.id}
+      onClick={() => deleteTaskHandler(task.id)}
+    >
+      { task.text }
     </li>
   );
 };

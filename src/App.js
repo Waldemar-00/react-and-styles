@@ -31,13 +31,15 @@ const App = () => {
   );
 
   if (tasks.length > 0) {
-    content = <TaskList tasks={tasks} deleteTaskHandler={deleteTaskHandler} />;
+    content = <TaskList tasks={tasks}
+                deleteTaskHandler={deleteTaskHandler}
+              />;
   }
 
   return (
     <div>
       <section id="task-form">
-        <TaskInput onAddTask={addTaskHandler} />
+        <TaskInput addTaskHandler={addTaskHandler} />
       </section>
       <section id="tasks">{content}</section>
     </div>

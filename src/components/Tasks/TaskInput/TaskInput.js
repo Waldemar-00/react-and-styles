@@ -3,16 +3,16 @@ import React, { useState } from "react";
 import Button from "../../UI/Button/Button";
 import "./TaskInput.css";
 
-const TaskInput = (props) => {
-  const [inputText, setinputText] = useState("");
+const TaskInput = ({ addTaskHandler }) => {
+  const [inputText, setInputText] = useState("");
 
   const taskInputChangeHandler = (event) => {
-    setinputText(event.target.value);
+    setInputText(event.target.value);
   };
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    props.onAddTask(inputText);
+    addTaskHandler(inputText);
   };
 
   return (
