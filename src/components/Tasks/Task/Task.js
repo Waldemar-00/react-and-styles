@@ -1,6 +1,5 @@
-import React from "react";
-
-import "./Task.css";
+import React from "react"
+import "./Task.css"
 
 const Task = ({ deleteTaskHandler, task }) => {
   return (
@@ -11,7 +10,7 @@ const Task = ({ deleteTaskHandler, task }) => {
     >
       { task.text }
     </li>
-  );
-};
+  )
+}
 
-export default Task;
+export default Task

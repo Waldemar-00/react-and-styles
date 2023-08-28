@@ -1,11 +1,11 @@
-import "./Button.css";
+import "./Button.css"
 
-const Button = (props) => {
+const Button = ({ type, children }) => {
   return (
-    <button type={props.type} className="button">
-      {props.children}
+    <button type={type} className="button">
+      {children}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
