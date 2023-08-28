@@ -3,11 +3,11 @@ import React from "react";
 import Task from "../Task/Task";
 import "./TaskList.css";
 
-const TaskList = (props) => {
+const TaskList = ({ tasks, deleteTaskHandler }) => {
   return (
     <ul className="task-list">
-      {props.items.map((task) => (
-        <Task key={task.id} id={task.id} onDelete={props.onDeleteTask}>
+      {tasks.map((task) => (
+        <Task key={task.id} id={task.id} deleteTaskHandler={deleteTaskHandler}>
           {task.text}
         </Task>
       ))}
