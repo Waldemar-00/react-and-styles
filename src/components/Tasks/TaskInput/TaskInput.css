@@ -22,3 +22,12 @@
   background: #c8e1e4;
   border-color: #00358b;
 }
+.form-control.invalid input {
+  background-color: #FFC9C9;
+  border-color: #FFC9C9;
+  font-style: italic;
+  color: red;
+}
+.form-control.invalid label {
+  color: #FFC9C9;
+}
