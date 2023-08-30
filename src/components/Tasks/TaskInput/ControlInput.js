@@ -7,12 +7,16 @@ const ControlInput = styled.div`
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
+    color: ${props => props.onInvalid ? 'inherit' : '#FFC9C9'};
   }
 
   & input {
     display: block;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid ${props => props.onInvalid ? '#ccc' : '#FFC9C9'};
+    background-color: ${props => props.onInvalid ? '#ccc' : '#FFC9C9'};
+    font-style: ${props => props.onInvalid ? 'inherit' : 'italic'};
+    color: ${props => props.onInvalid ? 'inherit' : 'red'};
     font: inherit;
     line-height: 1.5rem;
     padding: 0 0.25rem;
@@ -22,15 +26,6 @@ const ControlInput = styled.div`
     outline: none;
     background: #c8e1e4;
     border-color: #00358b;
-  }
-  &.invalid input {
-    background-color: #FFC9C9;
-    border-color: #FFC9C9;
-    font-style: italic;
-    color: red;
-  }
-  &.invalid label {
-    color: #FFC9C9;
   }
 `
 
