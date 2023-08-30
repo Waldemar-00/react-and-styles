@@ -1,6 +1,10 @@
 // import "./Button.css"
 import styled from 'styled-components'
 const Button = styled.button`
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+
   font: inherit;
   padding: 0.5rem 1.5rem;
   color: white;
