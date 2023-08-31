@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Button from "../../UI/Button/Button"
-import ControlInput from './ControlInput'
-import "./TaskInput.css"
+// import ControlInput from './ControlInput'
+import styles from "./TaskInput.module.css"
 
 const TaskInput = ({ addTaskHandler }) => {
   const [inputText, setInputText] = useState("");
@@ -28,9 +28,9 @@ const TaskInput = ({ addTaskHandler }) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      {/* <div className={`form-control ${isValidInput ? '' : 'invalid'}`}> */}
+      <div className={`${styles['form-control']} ${isValidInput ? '' : styles['invalid']}`}>
       {/* <ControlInput className={isValidInput ? '' : 'invalid'}> */}
-      <ControlInput isvalidinput={isValidInput}>
+      {/* <ControlInput isvalidinput={isValidInput}> */}
         <label>Задачи</label>
         <input
           type="text"
@@ -38,8 +38,8 @@ const TaskInput = ({ addTaskHandler }) => {
           onFocus={onInputFocus}
           onChange={taskInputChangeHandler}
         />
-      </ControlInput>
-      {/* </div> */}
+      {/* </ControlInput> */}
+      </div>
       <Button disabled={!isValidInput} type="submit">Добавить Задачу</Button>
     </form>
   )
