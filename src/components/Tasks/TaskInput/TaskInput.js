@@ -30,7 +30,7 @@ const TaskInput = ({ addTaskHandler }) => {
     <form onSubmit={formSubmitHandler}>
       {/* <div className={`form-control ${isValidInput ? '' : 'invalid'}`}> */}
       {/* <ControlInput className={isValidInput ? '' : 'invalid'}> */}
-      <ControlInput onInvalid={() => isValidInput}>
+      <ControlInput isvalidinput={isValidInput}>
         <label>Задачи</label>
         <input
           type="text"
